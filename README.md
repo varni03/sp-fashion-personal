@@ -1,10 +1,20 @@
-# SP Fashion – Personalized E-Commerce Platform
+# SP-Fashion — Personal Portfolio Version
 
-This repository hosts the backend and frontend for a sustainable, AI-driven fashion e-commerce site.
+This repository showcases my personal contributions to the SP-Fashion project built as part of NOBE.
 
-## Quick start
-1. Clone and install  
-   ```bash
-   git clone https://github.com/ronakgm2/SP-Fashion.git
-   cd SP-Fashion
-   npm install
+## My Contributions
+- Backend API development
+- Database schema design
+- Server-side logic
+- Team collaboration using Git
+
+## Tech Stack
+- Node.js
+- Express
+- MongoDB
+- JavaScript
+
+## Credits
+Originally a team project built with my NOBE team
+
+Created by Varnika Jain
