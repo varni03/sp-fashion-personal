@@ -1,0 +1,443 @@
+
+
+{
+  "_id": "ObjectId",
+  "login": "String",
+  "email": "String",
+  "password": "String",
+  "profile": {
+    "firstName": "String",
+    "lastName": "String",
+    "phoneNumber": "String",
+    "avatar": "String"
+  },
+  "addresses": [
+    {
+      "type": "String",
+      "street": "String",
+      "city": "String",
+      "state": "String",
+      "zipCode": "String",
+      "country": "String",
+      "isDefault": "Boolean"
+    }
+  ],
+  "cart": [
+    {
+      "productId": "String",
+      "quantity": "Number",
+      "addedAt": "Date"
+    }
+  ],
+  "preferences": {
+    "stylePreferences": ["String"],
+    "colorPreferences": ["String"],
+    "sizePreference": "String",
+    "sustainabilityPriority": "String",
+    "newsletter": "Boolean",
+    "notifications": {
+      "email": "Boolean",
+      "sms": "Boolean",
+      "push": "Boolean"
+    }
+  },
+  "orderHistory": ["String"],
+  "role": "String",
+  "accountStatus": "String",
+  "createdAt": "Date",
+  "updatedAt": "Date",
+  "lastLoginAt": "Date"
+}
+
+{
+  "_id": "ObjectId",
+  "name": "String",
+  "slug": "String",
+  "description": "String",
+  "category": "String",
+  "subcategory": "String",
+  "material": "String",
+  "carbonFootprint": {
+    "value": "Number",
+    "unit": "String",
+    "lifecycle": "String"
+  },
+  "pricing": {
+    "basePrice": "Number",
+    "currency": "String",
+    "salePrice": "Number",
+    "discount": "Number",
+    "taxRate": "Number"
+  },
+  "inventory": {
+    "totalStock": "Number",
+    "reserved": "Number",
+    "available": "Number",
+    "reorderLevel": "Number",
+    "reorderQuantity": "Number",
+    "warehouseLocations": [
+      {
+        "warehouse": "String",
+        "quantity": "Number",
+        "location": "String"
+      }
+    ]
+  },
+  "variants": [
+    {
+      "variantId": "String",
+      "color": "String",
+      "size": "String",
+      "sku": "String",
+      "stock": "Number",
+      "price": "Number"
+    }
+  ],
+  "images": [
+    {
+      "imageId": "String",
+      "url": "String",
+      "altText": "String",
+      "isPrimary": "Boolean",
+      "uploadedAt": "Date"
+    }
+  ],
+  "sustainability": {
+    "certifications": ["String"],
+    "waterUsage": {
+      "value": "Number",
+      "unit": "String",
+      "savings": "String"
+    },
+    "pesticidesUsed": "String",
+    "productionNotes": "String",
+    "recyclable": "Boolean",
+    "biodegradable": "Boolean"
+  },
+  "reviews": [
+    {
+      "reviewId": "String",
+      "userId": "String",
+      "rating": "Number",
+      "title": "String",
+      "comment": "String",
+      "helpful": "Number",
+      "createdAt": "Date"
+    }
+  ],
+  "seo": {
+    "metaTitle": "String",
+    "metaDescription": "String",
+    "keywords": ["String"]
+  },
+  "tags": ["String"],
+  "createdAt": "Date",
+  "updatedAt": "Date",
+  "isActive": "Boolean"
+}
+
+{
+  "_id": "ObjectId",
+  "orderNumber": "String",
+  "userId": "String",
+  "status": "String",
+  "items": [
+    {
+      "itemId": "String",
+      "productId": "String",
+      "variantId": "String",
+      "sku": "String",
+      "name": "String",
+      "quantity": "Number",
+      "unitPrice": "Number",
+      "totalPrice": "Number",
+      "color": "String",
+      "size": "String",
+      "carbonFootprint": "Number"
+    }
+  ],
+  "orderTotals": {
+    "subtotal": "Number",
+    "taxAmount": "Number",
+    "shippingCost": "Number",
+    "discountAmount": "Number",
+    "discountCode": "String",
+    "total": "Number",
+    "currency": "String"
+  },
+  "shippingAddress": {
+    "name": "String",
+    "street": "String",
+    "city": "String",
+    "state": "String",
+    "zipCode": "String",
+    "country": "String",
+    "phoneNumber": "String"
+  },
+  "billingAddress": {
+    "name": "String",
+    "street": "String",
+    "city": "String",
+    "state": "String",
+    "zipCode": "String",
+    "country": "String"
+  },
+  "shipping": {
+    "method": "String",
+    "carrier": "String",
+    "trackingNumber": "String",
+    "estimatedDeliveryDate": "Date",
+    "actualDeliveryDate": "Date",
+    "shippedAt": "Date",
+    "deliveredAt": "Date",
+    "shippingLabel": "String"
+  },
+  "payment": {
+    "paymentId": "String",
+    "method": "String",
+    "status": "String",
+    "transactionId": "String",
+    "processorId": "String",
+    "last4": "String",
+    "cardBrand": "String",
+    "paidAt": "Date",
+    "receiptUrl": "String"
+  },
+  "invoice": {
+    "invoiceNumber": "String",
+    "issuedDate": "Date",
+    "dueDate": "Date",
+    "isPaid": "Boolean",
+    "paidDate": "Date",
+    "invoiceUrl": "String"
+  },
+  "notes": {
+    "customerNotes": "String",
+    "internalNotes": "String"
+  },
+  "sustainability": {
+    "totalCarbonFootprint": "Number",
+    "packagingMaterial": "String",
+    "offsetCarbon": "Boolean",
+    "carbonOffsetAmount": "Number"
+  },
+  "timeline": [
+    {
+      "event": "String",
+      "status": "String",
+      "timestamp": "Date",
+      "message": "String"
+    }
+  ],
+  "createdAt": "Date",
+  "updatedAt": "Date"
+}
+
+{
+  "_id": "ObjectId",
+  "paymentNumber": "String",
+  "orderId": "String",
+  "userId": "String",
+  "amount": "Number",
+  "currency": "String",
+  "status": "String",
+  "method": "String",
+  "paymentDetails": {
+    "processor": "String",
+    "processorId": "String",
+    "transactionId": "String",
+    "transactionRef": "String",
+    "cardBrand": "String",
+    "cardLast4": "String",
+    "cardExpiry": "String",
+    "cardholderName": "String",
+    "billingZipCode": "String",
+    "receiptEmail": "String"
+  },
+  "breakdown": {
+    "subtotal": "Number",
+    "tax": "Number",
+    "shipping": "Number",
+    "discount": "Number",
+    "total": "Number"
+  },
+  "receipt": {
+    "receiptNumber": "String",
+    "receiptUrl": "String",
+    "receiptEmailSent": "Boolean",
+    "receiptEmailSentAt": "Date"
+  },
+  "refund": {
+    "isRefunded": "Boolean",
+    "refundAmount": "Number",
+    "refundDate": "Date",
+    "refundReason": "String",
+    "refundTransactionId": "String"
+  },
+  "metadata": {
+    "ipAddress": "String",
+    "userAgent": "String",
+    "deviceType": "String"
+  },
+  "createdAt": "Date",
+  "updatedAt": "Date"
+}
+
+// 5. INVOICES COLLECTION
+{
+  "_id": "ObjectId",
+  "invoiceNumber": "String",
+  "orderId": "String",
+  "userId": "String",
+  "companyInfo": {
+    "name": "String",
+    "address": "String",
+    "phoneNumber": "String",
+    "email": "String",
+    "taxId": "String",
+    "logo": "String"
+  },
+  "billTo": {
+    "name": "String",
+    "email": "String",
+    "address": "String",
+    "phoneNumber": "String"
+  },
+  "shipTo": {
+    "name": "String",
+    "address": "String"
+  },
+  "lineItems": [
+    {
+      "itemId": "Number",
+      "description": "String",
+      "quantity": "Number",
+      "unitPrice": "Number",
+      "totalPrice": "Number",
+      "sku": "String",
+      "taxRate": "Number"
+    }
+  ],
+  "summary": {
+    "subtotal": "Number",
+    "taxableAmount": "Number",
+    "taxAmount": "Number",
+    "shippingCost": "Number",
+    "shippingTax": "Number",
+    "discountAmount": "Number",
+    "total": "Number",
+    "amountPaid": "Number",
+    "amountDue": "Number",
+    "currency": "String"
+  },
+  "terms": {
+    "issueDate": "Date",
+    "dueDate": "Date",
+    "paymentTerms": "String"
+  },
+  "paymentInfo": {
+    "isPaid": "Boolean",
+    "paidDate": "Date",
+    "paidAmount": "Number",
+    "paymentMethod": "String",
+    "transactionId": "String"
+  },
+  "notes": {
+    "publicNotes": "String",
+    "privateNotes": "String"
+  },
+  "documents": {
+    "invoicePdf": "String",
+    "receiptPdf": "String"
+  },
+  "createdAt": "Date",
+  "updatedAt": "Date"
+}
+
+{
+  "_id": "ObjectId",
+  "productId": "String",
+  "fileName": "String",
+  "fileType": "String",
+  "fileSize": "Number",
+  "filePath": "String",
+  "thumbnailPath": "String",
+  "altText": "String",
+  "description": "String",
+  "isPrimary": "Boolean",
+  "displayOrder": "Number",
+  "metadata": {
+    "width": "Number",
+    "height": "Number",
+    "format": "String",
+    "uploadedBy": "String",
+    "sourceUrl": "String"
+  },
+  "uploadedAt": "Date",
+  "updatedAt": "Date"
+}
+
+{
+  "_id": "ObjectId",
+  "period": "String",
+  "totalOrders": "Number",
+  "totalRevenue": "Number",
+  "averageOrderValue": "Number",
+  "topProducts": [
+    {
+      "productId": "String",
+      "name": "String",
+      "unitsSold": "Number",
+      "revenue": "Number"
+    }
+  ],
+  "customerMetrics": {
+    "newCustomers": "Number",
+    "returningCustomers": "Number",
+    "totalCustomers": "Number",
+    "averageCustomerLifetimeValue": "Number"
+  },
+  "paymentMetrics": {
+    "successfulTransactions": "Number",
+    "failedTransactions": "Number",
+    "successRate": "Number",
+    "averageTransactionValue": "Number",
+    "refundRate": "Number"
+  },
+  "shippingMetrics": {
+    "averageDeliveryTime": "Number",
+    "onTimeDeliveryRate": "Number",
+    "damagedShipmentsRate": "Number"
+  },
+  "sustainabilityMetrics": {
+    "totalCarbonFootprintOffset": "Number",
+    "packagingRecycled": "Number",
+    "treesPlanted": "Number"
+  },
+  "createdAt": "Date",
+  "updatedAt": "Date"
+}
+
+{
+  "_id": "ObjectId",
+  "userId": "String",
+  "sessionId": "String",
+  "cartItems": [
+    {
+      "productId": "String",
+      "variantId": "String",
+      "name": "String",
+      "quantity": "Number",
+      "price": "Number",
+      "addedAt": "Date"
+    }
+  ],
+  "cartTotal": "Number",
+  "status": "String",
+  "recoveryEmailSent": "Boolean",
+  "recoveryEmailSentAt": "Date",
+  "createdAt": "Date",
+  "updatedAt": "Date",
+  "expiresAt": "Date"
+}
+
